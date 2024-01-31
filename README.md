@@ -1,4 +1,4 @@
-# Iva's Fantastic List of z>=10 Galaxies
+# Amazing up to date catalog of high redshift QSOs
 
 This is a list of interesting things in this case high-redshift galaxies. All `things` are found in `src/website/things` folder. New `things` can be added via pull request or commit.
 
