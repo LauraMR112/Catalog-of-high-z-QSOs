@@ -1,0 +1,36 @@
+default_dec:
+  value: 1.010694
+default_name:
+  value: J124353.93+010038.50
+default_ra:
+  value: 190.974708
+default_ref:
+  value: Izumi2021b
+default_z:
+  value: 7.0749
+extra_BHmass:
+  value: '3.62'
+extra_BHmass_ref:
+  value: Matsuoka2019b
+extra_L3000:
+  value: '0.27'
+extra_L3000_err_low:
+  value: '0.019'
+extra_L3000_err_up:
+  value: '0.019'
+extra_fwhm_mgii:
+  value: '3100'
+extra_fwhm_mgii_err_low:
+  value: '900'
+extra_fwhm_mgii_err_up:
+  value: '900'
+extra_z_mgii:
+  value: '7.07'
+extra_z_mgii_err:
+  value: '0.01'
+extra_z_mgii_ref:
+  value: Matsuoka2019b
+photometry_absM1450:
+  value: -24.13
+photometry_m1450:
+  value: 22.82

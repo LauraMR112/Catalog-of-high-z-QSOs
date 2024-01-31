@@ -1,0 +1,36 @@
+default_dec:
+  value: -1.029691
+default_name:
+  value: J222018.49-010146.89
+default_ra:
+  value: 335.07704
+default_ref:
+  value: McGreer2013
+default_z:
+  value: 5.62
+extra_BHmass:
+  value: --
+extra_BHmass_ref:
+  value: --
+extra_L3000:
+  value: --
+extra_L3000_err_low:
+  value: --
+extra_L3000_err_up:
+  value: --
+extra_fwhm_mgii:
+  value: --
+extra_fwhm_mgii_err_low:
+  value: --
+extra_fwhm_mgii_err_up:
+  value: --
+extra_z_mgii:
+  value: --
+extra_z_mgii_err:
+  value: --
+extra_z_mgii_ref:
+  value: --
+photometry_absM1450:
+  value: -25.93
+photometry_m1450:
+  value: 20.66

@@ -1,12 +1,12 @@
-name: "A Fantastic List of z>10 Galaxies"
-description: "Iva's list of z>10 galaxies, mostly discovered by JWST. Collected from the arXiv from July 13, 2022 up to now."
+name: "Amazing up to date catalog of high redshift QSOs"
+description: "List of QSOs at redshift higher than 5. Collected from the Fan et al. (2022) up to now."
 properties:
-- name: ID
+- name: Name
   kind: string
   units: ""
   required: True
   group: Default
-  key: default_id
+  key: default_name
 - name: RA
   kind: float
   units: degrees
@@ -19,159 +19,93 @@ properties:
   required: True
   group: Default
   key: default_dec
-- name: PhotRedshift
+- name: Redshift
   kind: float
   units: ""
   required: True
   group: Default
-  key: default_phot_z
-- name: FirstAuthor
-  kind: string
-  units: ""
-  required: True
-  group: Default
-  key: default_first_author
+  key: default_z
 - name: Reference
   kind: string
   units: ""
   required: True
   group: Default
   key: default_ref
-- name: PhotRedshiftErrorPlus
+- name: m1450
+  kind: float
+  units: AB_mag
+  required: False
+  group: Photometry
+  key: photometry_m1450
+- name: absM1450
+  kind: float
+  units: AB_mag
+  required: False
+  group: Photometry
+  key: photometry_absM1450
+- name: 'z_mgii'
   kind: float
   units: ""
   required: False
   group: Extra
-  key: extra_phot_z_err_plus
-- name: PhotRedshiftErrorMinus
+  key: extra_z_mgii
+- name: 'z_mgii_err'
   kind: float
   units: ""
   required: False
   group: Extra
-  key: extra_phot_z_err_minus
-- name: 'SpecRedshift'
-  kind: float
+  key: extra_z_mgii_err
+- name: 'z_mgii_ref'
+  kind: string
   units: ""
   required: False
   group: Extra
-  key: extra_spec_z
-- name: 'SpecRedshiftError'
+  key: extra_z_mgii_ref
+- name: 'fwhm_mgii'
   kind: float
+  units: km/s
+  required: False
+  group: Extra
+  key: extra_fwhm_mgii
+- name: 'fwhm_mgii_err_up'
+  kind: float
+  units: km/s
+  required: False
+  group: Extra
+  key: extra_fwhm_mgii_err_up
+- name: 'fwhm_mgii_err_low'
+  kind: float
+  units: km/s
+  required: False
+  group: Extra
+  key: extra_fwhm_mgii_err_low
+- name: L3000
+  kind: float
+  units: 1e46 erg/s
+  required: False
+  group: Extra
+  key: extra_L3000
+- name: L3000_err_up
+  kind: float
+  units: 1e46 erg/s
+  required: False
+  group: Extra
+  key: extra_L3000_err_up
+- name: L3000_err_low
+  kind: float
+  units: 1e46 erg/s
+  required: False
+  group: Extra
+  key: extra_L3000_err_low
+- name: BHmass
+  kind: float
+  units: 1e8 M_sun
+  required: False
+  group: Extra
+  key: extra_BHmass
+- name: BHmass_ref
+  kind: string
   units: ""
   required: False
   group: Extra
-  key: 'extra_spec_z_err'
-- name: 'JWSTProgram'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_jwst_program
-- name: 'StellarMass'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_mass
-- name: 'StellarMassErrPlus'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_mass_err_plus
-- name: 'StellarMassErrMinus'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_mass_err_minus
-- name: 'Muv'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_muv
-- name: 'MuvErrPlus'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_muv_err_plus
-- name: 'MuvErrMinus'
-  kind: int
-  units: ""
-  required: False
-  group: Extra
-  key: extra_muv_err_minus
-- name: 'F090W'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F090W
-- name: 'F090We'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F090We
-- name: 'F150W'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F150W
-- name: 'F150We'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F150We
-- name: 'F200W'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F200W
-- name: 'F200We'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F200We
-- name: 'F277W'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F277W
-- name: 'F277We'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F277We
-- name: 'F356W'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F356W
-- name: 'F356We'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F356We
-- name: 'F444W'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F444W
-- name: 'F444We'
-  kind: float
-  units: ""
-  required: False
-  group: Photometry
-  key: photometry_F444We
+  key: extra_BHmas_ref

@@ -1,0 +1,36 @@
+default_dec:
+  value: 12.293722
+default_name:
+  value: J141111.29+121737.40
+default_ra:
+  value: 212.79704
+default_ref:
+  value: DeRosa2011
+default_z:
+  value: 5.903
+extra_BHmass:
+  value: '4.13'
+extra_BHmass_ref:
+  value: DeRosa2011
+extra_L3000:
+  value: '0.51'
+extra_L3000_err_low:
+  value: '0.008'
+extra_L3000_err_up:
+  value: '0.008'
+extra_fwhm_mgii:
+  value: '2824'
+extra_fwhm_mgii_err_low:
+  value: '168'
+extra_fwhm_mgii_err_up:
+  value: '168'
+extra_z_mgii:
+  value: '5.903'
+extra_z_mgii_err:
+  value: '0.001'
+extra_z_mgii_ref:
+  value: DeRosa2011
+photometry_absM1450:
+  value: -26.64
+photometry_m1450:
+  value: 20.03

@@ -1,0 +1,36 @@
+default_name:
+  value: ''
+default_ra:
+  value:
+default_dec:
+  value:
+default_z:
+  value:
+default_ref:
+  value: ''
+photometry_m1450:
+  value:
+photometry_absM1450:
+  value:
+extra_z_mgii:
+  value:
+extra_z_mgii_err:
+  value:
+extra_z_mgii_ref:
+  value:
+extra_fwhm_mgii:
+  value:
+extra_fwhm_mgii_err_up:
+  value:
+extra_fwhm_mgii_err_low:
+  value:
+extra_L3000:
+  value:
+extra_L3000_err_up:
+  value:
+extra_L3000_err_low:
+  value:
+extra_BHmass:
+  value:
+extra_BHmass_ref:
+  value: ''

@@ -176,9 +176,9 @@ class Generator(dict):
         return os.path.dirname(os.path.realpath(__file__))
 
     @property
-    def things_dir(self):
+    def QSOs_dir(self):
         """ Root directory of the data."""
-        return os.path.join(self.theme_dir,'things')
+        return os.path.join(self.theme_dir,'QSOs')
 
     @property
     def template_dir(self):
@@ -217,9 +217,9 @@ class Generator(dict):
         shutil.copytree(os.path.join(self.template_dir, 'assets'), os.path.join(build_dir, "assets"))
         print(f'Copy assets from {os.path.join(self.template_dir, "assets")} to {os.path.join(build_dir, "assets")}')
 
-        print(self.things_dir, os.path.join(build_dir, "things"))
-        shutil.copytree(self.things_dir, os.path.join(build_dir, "things"))
-        print(f'Copy things from {self.things_dir} to {os.path.join(build_dir, "things")}')
+        print(self.QSOs_dir, os.path.join(build_dir, "QSOs"))
+        shutil.copytree(self.QSOs_dir, os.path.join(build_dir, "QSOs"))
+        print(f'Copy QSOs from {self.QSOs_dir} to {os.path.join(build_dir, "QSOs")}')
 
         with open(self.index_template, 'r') as f:
             print('Reading index template...', self.index_template)
@@ -227,12 +227,12 @@ class Generator(dict):
 
         table_head = generate_table_head(self['columns_title'])
 
-        things = glob.glob(os.path.join(build_dir,'things/*yml'))
+        QSOs = glob.glob(os.path.join(build_dir,'QSOs/*yml'))
         table_body = ''
-        for thing in things:
-            with open(thing) as f:
-                thing_yaml = yaml.load(f, Loader = SafeLoader)
-                table_body += generate_table_line(thing_yaml,self['columns'], base_url = self['baseURL'])
+        for QSO in QSOs:
+            with open(QSO) as f:
+                QSO_yaml = yaml.load(f, Loader = SafeLoader)
+                table_body += generate_table_line(QSO_yaml,self['columns'], base_url = self['baseURL'])
 
 
 
@@ -246,54 +246,48 @@ class Generator(dict):
 
         print("\nWebsite generated into {}".format(build_dir))
 
-def generate_table_line(thing: dict = {}, columns: list = [], base_url=''):
+def generate_table_line(QSO: dict = {}, columns: list = [], base_url=''):
 
     table_line = []
-    api_url = f'{base_url}things/{thing["default_ref"]["value"]}_{thing["default_id"]["value"]}.yml'
-    api_link = get_href(url=api_url, text=thing["default_id"]["value"])
+    #Generate a link to download data of each source
+    api_url = f'{base_url}QSOs/{QSO["default_ref"]["value"]}_{QSO["default_name"]["value"]}.yml'
+    api_link = get_href(url=api_url, text=QSO["default_name"]["value"])
     table_line.append(f'<tr><th scope="row">{api_link}</th>')
 
     for col in columns[1:]:
-        if col == 'default_ref':
-            year = thing[col]["value"][:4]
-            url = 'https://ui.adsabs.harvard.edu/abs/'+thing[col]["value"]+'/abstract'
-            link = get_href(url=url, text=f'{thing["default_first_author"]["value"]} et al. ({year})')
+        # For now I'll avoid this: default_ref
+        if col == 'default_ref_paper':
+            year = QSO[col]["value"][:4]
+            url = 'https://ui.adsabs.harvard.edu/abs/'+QSO[col]["value"]+'/abstract'
+            link = get_href(url=url, text=f'{QSO["default_first_author"]["value"]} et al. ({year})')
             table_line.append(f'<td>{link}</td>')
 
-        elif col == 'default_phot_z' and thing['extra_phot_z_err_plus']['value'] and thing['extra_phot_z_err_minus']['value']:
-                entry = f'{thing[col]["value"]}\
+        elif col == 'extra_fwhm_mgii' and QSO['extra_fwhm_mgii_err_up']['value'] and QSO['extra_fwhm_mgii_err_low']['value']:
+                entry = f'{QSO[col]["value"]}\
                     <span class="supsub">\
-                    <sup>+{thing["extra_phot_z_err_plus"]["value"]}</sup>\
-                    <sub>-{thing["extra_phot_z_err_minus"]["value"]}</sub>\
+                    <sup>+{QSO["extra_fwhm_mgii_err_up"]["value"]}</sup>\
+                    <sub>-{QSO["extra_fwhm_mgii_err_low"]["value"]}</sub>\
                     </span>'
                 table_line.append(f'<td>{entry}</td>')
 
-        elif col == 'extra_muv' and thing['extra_muv_err_plus']['value'] and thing['extra_muv_err_minus']['value']:
-                entry = f'{thing[col]["value"]}\
+        elif col == 'extra_L3000' and QSO['extra_L3000_err_up']['value'] and QSO['extra_L3000_err_low']['value']:
+                entry = f'{QSO[col]["value"]}\
                     <span class="supsub">\
-                    <sup>+{thing["extra_muv_err_plus"]["value"]}</sup>\
-                    <sub>-{thing["extra_muv_err_minus"]["value"]}</sub>\
+                    <sup>+{QSO["extra_L3000_err_up"]["value"]}</sup>\
+                    <sub>-{QSO["extra_L3000_err_low"]["value"]}</sub>\
                     </span>'
                 table_line.append(f'<td>{entry}</td>')
 
-        elif col == 'extra_mass' and thing['extra_mass_err_plus']['value'] and thing['extra_mass_err_minus']['value']:
-                entry = f'{thing[col]["value"]}\
-                    <span class="supsub">\
-                    <sup>+{thing["extra_mass_err_plus"]["value"]}</sup>\
-                    <sub>-{thing["extra_mass_err_minus"]["value"]}</sub>\
-                    </span>'
-                table_line.append(f'<td>{entry}</td>')
-
-        elif col == 'extra_spec_z' and thing['extra_spec_z']["value"]:
-            entry = f'<td>{thing[col]["value"]}'
-            if thing["extra_spec_z_err"]["value"]:
-                entry += f'+-{thing["extra_spec_z_err"]["value"]}</td>'
+        elif col == 'extra_z_mgii' and QSO['extra_z_mgii']["value"]:
+            entry = f'<td>{QSO[col]["value"]}'
+            if QSO["extra_z_mgii_err"]["value"]:
+                entry += f'+-{QSO["extra_z_mgii_err"]["value"]}</td>'
             else:
                 entry += '</td>'
             table_line.append(entry)
 
         else:
-            table_line.append(f'<td>{thing[col]["value"]}</td>')
+            table_line.append(f'<td>{QSO[col]["value"]}</td>')
     table_line.append('</tr>')
     return ''.join(table_line)
 

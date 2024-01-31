@@ -1,7 +1,7 @@
 # website name
-title: z~10 things
+title: Up to date catalog of high-z QSOs
 # website URL
-baseURL: 'https://ivastar.github.io/z10-galaxies/'
+baseURL: 'https://LauraMR112.github.io/Catalog-of-high-z-QSOs/' 
 
 #theme
 theme: "default"
@@ -12,8 +12,9 @@ sourcedir: "content"
 # build directory
 builddir: "_build/html"
 # columns for Table
-columns: ['default_id','default_ra','default_dec','default_phot_z','extra_spec_z','extra_muv','extra_mass','default_ref']
-columns_title: ['ID','RA','Dec','z_phot','z_spec','Muv','M*','Reference']
+columns: ['default_name', 'default_ra', 'default_dec', 'default_z', 'default_ref', 'photometry_m1450', 'photometry_absM1450', 'extra_z_mgii', 'extra_z_mgii_err', 'extra_z_mgii_ref', 'extra_fwhm_mgii', 'extra_fwhm_mgii_err_up', 'extra_fwhm_mgii_err_low', 'extra_L3000', 'extra_L3000_err_up', 'extra_L3000_err_low', 'extra_BHmass', 'extra_BHmass_ref']
+
+columns_title: ['Name','RA','Dec','z','Reference','m1450','M1450','z_mgii', 'z_mgii_err', 'z_mgii_ref', 'fwhm_mgii', 'fwhm_mgii_err_up', 'fwhm_mgii_err_low', 'L3000', 'L3000_err_upp', 'L3000_err_low', 'BHmass', 'BHmass_ref' ]
 
 
 # setup markdown options
