@@ -1,0 +1,36 @@
+default_dec:
+  value: -26.954335
+default_name:
+  value: J042138.05-265715.61
+default_ra:
+  value: 65.408537
+default_ref:
+  value: Venemans2020
+default_z:
+  value: 6.1871
+extra_BHmass:
+  value: '45.92'
+extra_BHmass_ref:
+  value: Farina2022
+extra_L3000:
+  value: '4.21'
+extra_L3000_err_low:
+  value: '0.087379'
+extra_L3000_err_up:
+  value: '0.08932'
+extra_fwhm_mgii:
+  value: '5558'
+extra_fwhm_mgii_err_low:
+  value: '303'
+extra_fwhm_mgii_err_up:
+  value: '352'
+extra_z_mgii:
+  value: '6.144'
+extra_z_mgii_err:
+  value: '0.003'
+extra_z_mgii_ref:
+  value: Farina2022
+photometry_absM1450:
+  value: -27.21
+photometry_m1450:
+  value: 19.53

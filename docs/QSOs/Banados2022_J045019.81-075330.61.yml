@@ -1,0 +1,36 @@
+default_dec:
+  value: -7.891836
+default_name:
+  value: J045019.81-075330.61
+default_ra:
+  value: 72.582533
+default_ref:
+  value: Banados2022
+default_z:
+  value: 5.75
+extra_BHmass:
+  value: --
+extra_BHmass_ref:
+  value: --
+extra_L3000:
+  value: --
+extra_L3000_err_low:
+  value: --
+extra_L3000_err_up:
+  value: --
+extra_fwhm_mgii:
+  value: --
+extra_fwhm_mgii_err_low:
+  value: --
+extra_fwhm_mgii_err_up:
+  value: --
+extra_z_mgii:
+  value: --
+extra_z_mgii_err:
+  value: --
+extra_z_mgii_ref:
+  value: --
+photometry_absM1450:
+  value: -25.66
+photometry_m1450:
+  value: 20.97

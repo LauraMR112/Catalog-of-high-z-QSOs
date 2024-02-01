@@ -1,0 +1,36 @@
+default_dec:
+  value: 29.351528
+default_name:
+  value: J070626.39+292105.50
+default_ra:
+  value: 106.609958
+default_ref:
+  value: Yang2021
+default_z:
+  value: 6.6037
+extra_BHmass:
+  value: '21.13'
+extra_BHmass_ref:
+  value: Yang2021
+extra_L3000:
+  value: '6.582525'
+extra_L3000_err_low:
+  value: '0.291262'
+extra_L3000_err_up:
+  value: '0.291262'
+extra_fwhm_mgii:
+  value: '3372'
+extra_fwhm_mgii_err_low:
+  value: '106'
+extra_fwhm_mgii_err_up:
+  value: '106'
+extra_z_mgii:
+  value: '6.5925'
+extra_z_mgii_err:
+  value: '0.0004'
+extra_z_mgii_ref:
+  value: Yang2021
+photometry_absM1450:
+  value: -27.52
+photometry_m1450:
+  value: 19.33

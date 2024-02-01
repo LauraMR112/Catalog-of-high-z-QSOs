@@ -1,0 +1,36 @@
+default_dec:
+  value: 45.71485
+default_name:
+  value: J140120.86+454253.46
+default_ra:
+  value: 210.336899
+default_ref:
+  value: Gloudemans2022
+default_z:
+  value: 5.45
+extra_BHmass:
+  value: --
+extra_BHmass_ref:
+  value: --
+extra_L3000:
+  value: --
+extra_L3000_err_low:
+  value: --
+extra_L3000_err_up:
+  value: --
+extra_fwhm_mgii:
+  value: --
+extra_fwhm_mgii_err_low:
+  value: --
+extra_fwhm_mgii_err_up:
+  value: --
+extra_z_mgii:
+  value: --
+extra_z_mgii_err:
+  value: --
+extra_z_mgii_ref:
+  value: --
+photometry_absM1450:
+  value: -25.5
+photometry_m1450:
+  value: 21.04

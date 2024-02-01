@@ -1,0 +1,36 @@
+default_dec:
+  value: 33.211666
+default_name:
+  value: J142738.59+331242.00
+default_ra:
+  value: 216.91079
+default_ref:
+  value: Khusanova2022
+default_z:
+  value: 6.118
+extra_BHmass:
+  value: '6.59'
+extra_BHmass_ref:
+  value: Shen2019
+extra_L3000:
+  value: '2.206482'
+extra_L3000_err_low:
+  value: '0.012459'
+extra_L3000_err_up:
+  value: '0.012459'
+extra_fwhm_mgii:
+  value: '2473.9'
+extra_fwhm_mgii_err_low:
+  value: '212.2'
+extra_fwhm_mgii_err_up:
+  value: '212.2'
+extra_z_mgii:
+  value: '6.1178'
+extra_z_mgii_err:
+  value: '0.005'
+extra_z_mgii_ref:
+  value: Shen2019
+photometry_absM1450:
+  value: -26.04
+photometry_m1450:
+  value: 20.68

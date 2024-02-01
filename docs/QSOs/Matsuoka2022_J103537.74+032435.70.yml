@@ -1,0 +1,36 @@
+default_dec:
+  value: 3.409917
+default_name:
+  value: J103537.74+032435.70
+default_ra:
+  value: 158.90725
+default_ref:
+  value: Matsuoka2022
+default_z:
+  value: 6.63
+extra_BHmass:
+  value: --
+extra_BHmass_ref:
+  value: --
+extra_L3000:
+  value: --
+extra_L3000_err_low:
+  value: --
+extra_L3000_err_up:
+  value: --
+extra_fwhm_mgii:
+  value: --
+extra_fwhm_mgii_err_low:
+  value: --
+extra_fwhm_mgii_err_up:
+  value: --
+extra_z_mgii:
+  value: --
+extra_z_mgii_err:
+  value: --
+extra_z_mgii_ref:
+  value: --
+photometry_absM1450:
+  value: -24.51
+photometry_m1450:
+  value: 22.34

@@ -1,0 +1,36 @@
+default_dec:
+  value: 37.922361
+default_name:
+  value: J164121.64+375520.50
+default_ra:
+  value: 250.34016
+default_ref:
+  value: Willott2010b
+default_z:
+  value: 6.047
+extra_BHmass:
+  value: '2.4'
+extra_BHmass_ref:
+  value: Willott2010b
+extra_L3000:
+  value: '1.2'
+extra_L3000_err_low:
+  value: '0.13'
+extra_L3000_err_up:
+  value: '0.13'
+extra_fwhm_mgii:
+  value: '1740'
+extra_fwhm_mgii_err_low:
+  value: '190'
+extra_fwhm_mgii_err_up:
+  value: '190'
+extra_z_mgii:
+  value: '6.047'
+extra_z_mgii_err:
+  value: '0.003'
+extra_z_mgii_ref:
+  value: Willott2010b
+photometry_absM1450:
+  value: -25.62
+photometry_m1450:
+  value: 21.09
