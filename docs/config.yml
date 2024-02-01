@@ -1,7 +1,7 @@
 # website name
 title: Up to date catalog of high-z QSOs
 # website URL
-baseURL: 'https://LauraMR112.github.io/Catalog-of-high-z-QSOs/' 
+baseURL: 'https://lauramr112.github.io/Catalog-of-high-z-QSOs/' 
 
 #theme
 theme: "default"
