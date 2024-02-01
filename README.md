@@ -6,7 +6,7 @@ The list currently inlcudes galaxies with photometric redshifts above 10 or with
 
 ## Webpage
 
-The data from this list is displayed on a GitHub Pages [webpage](https://ivastar.github.io/z10-galaxies/). The page has sortable columns, table search and per-column search, export options.
+The data from this list is displayed on a GitHub Pages [webpage](https://lauramr112.github.io/Catalog-of-high-z-QSOs/). The page has sortable columns, table search and per-column search, export options.
 
 The page is recreated every time the reporsitory master branch is updated.
 
